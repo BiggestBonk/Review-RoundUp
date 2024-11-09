@@ -7,11 +7,10 @@ export default function AppLayout() {
 
   return (
     <>
-      <Header></Header>
-        <h1>Welcome</h1>
+
+        <Header/>
         <Outlet/>
-        
-        <Footer></Footer>
+        <Footer/>
     </>
   )
 }
