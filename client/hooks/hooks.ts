@@ -1,60 +1,12 @@
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  MutationFunction,
-} from '@tanstack/react-query'
-import { CurrentlyPlaying } from '../components/CurrentlyPlaying'
-import request from 'superagent'
+import { useQuery } from '@tanstack/react-query'
+import * as API from '../apis/Games'
 
-export default function useAddCurrentlyPlaying(id: number) {
+export function useGames() {
   return useQuery({
-    queryKey: ['game', id],
-    queryFn: async () => {
-      const res = await request.post(`/api/v4/events/${id}`)
-      return res.body as Event
-    },
+    queryKey: ['games'],
+    queryFn: API.getGames,
   })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // export function useAddCurrentlyPlaying() {
 //   const query = useQuery({ queryKey: ['fruits'], queryFn: getGenres })

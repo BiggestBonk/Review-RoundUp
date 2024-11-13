@@ -1,4 +1,8 @@
 export interface GamePreview {
-  id: number
+  id: number,
   name: string
+}
+
+export interface Game {
+  
 }
