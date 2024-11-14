@@ -4,5 +4,5 @@ export interface GamePreview {
 }
 
 export interface Game {
-  
+  name:string
 }

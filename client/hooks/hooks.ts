@@ -1,12 +1,12 @@
-import { useQuery } from '@tanstack/react-query'
-import * as API from '../apis/Games'
+// import { useQuery } from '@tanstack/react-query'
+// import * as API from '../apis/Games.ts'
 
-export function useGames() {
-  return useQuery({
-    queryKey: ['games'],
-    queryFn: API.getGames,
-  })
-}
+// export function useGames() {
+//   return useQuery({
+//     queryKey: ['games'],
+//     queryFn: API.getGames,
+//   })
+// }
 
 // export function useAddCurrentlyPlaying() {
 //   const query = useQuery({ queryKey: ['fruits'], queryFn: getGenres })

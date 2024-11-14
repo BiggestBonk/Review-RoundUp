@@ -1,6 +1,7 @@
 import connection from './connection.ts'
-import { Fruit } from '../../models/fruit.ts'
+import { Game } from '../../models/Games.ts'
 
-export async function getAllFruits(db = connection): Promise<Fruit[]> {
-  return db('fruit').select()
+export async function getGames(db = connection): Promise<Game[]> {
+  return db('games').select()
 }
+

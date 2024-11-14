@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getGames } from '../apis/Games'
 
 export function CurrentlyPlaying() {
-  const { isPending, isError, data } = useQuery({
+  const { isPending, isError, data, error } = useQuery({
     queryKey: ['games'],
     queryFn: () => getGames(),
   })
@@ -12,12 +12,14 @@ export function CurrentlyPlaying() {
     return <p>Loading...</p>
   }
   if (isError) {
+    console.log(error)
     return <p>Problem loading games</p>
   }
+  console.log(data)
   return (
     <>
       <header>
-        <h2>{data}</h2>
+        <h2>{}</h2>
       </header>
     </>
   )
