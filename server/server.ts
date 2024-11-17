@@ -1,7 +1,14 @@
 import express from 'express'
 import * as Path from 'node:path'
-// import request from 'superagent'
 const server = express()
+
+if (process.env.NODE_ENV === 'production') {
+  server.use(express.static(Path.resolve('public')))
+  server.use('/assets', express.static(Path.resolve('./dist/assets')))
+  server.get('*', (req, res) => {
+    res.sendFile(Path.resolve('./dist/index.html'))
+  })
+}
 // const rootUrl = 'https://api.igdb.com/v4/games'
 // request
 //   .post(rootUrl)
@@ -35,13 +42,5 @@ const server = express()
 //   .catch((err) => {
 //     console.error(err)
 //   })
-
-if (process.env.NODE_ENV === 'production') {
-  server.use(express.static(Path.resolve('public')))
-  server.use('/assets', express.static(Path.resolve('./dist/assets')))
-  server.get('*', (req, res) => {
-    res.sendFile(Path.resolve('./dist/index.html'))
-  })
-}
 
 export default server

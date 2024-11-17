@@ -1,12 +1,15 @@
-// import { useQuery } from '@tanstack/react-query'
-// import * as API from '../apis/Games.ts'
+import { useQuery } from '@tanstack/react-query'
+import request from 'superagent'
 
-// export function useGames() {
-//   return useQuery({
-//     queryKey: ['games'],
-//     queryFn: API.getGames,
-//   })
-// }
+export function useGames() {
+  return useQuery({
+    queryKey: ['games'],
+    queryFn: async () => {
+      const res = await request.get('/')
+      return res
+    },
+  })
+}
 
 // export function useAddCurrentlyPlaying() {
 //   const query = useQuery({ queryKey: ['fruits'], queryFn: getGenres })

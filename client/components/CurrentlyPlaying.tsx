@@ -1,12 +1,7 @@
-import { useQuery } from '@tanstack/react-query'
-
-import { getGames } from '../apis/Games'
+import { useGames } from '../hooks/hooks'
 
 export function CurrentlyPlaying() {
-  const { isPending, isError, data, error } = useQuery({
-    queryKey: ['games'],
-    queryFn: () => getGames(),
-  })
+  const { isPending, isError, data, error } = useGames()
 
   if (isPending) {
     return <p>Loading...</p>
@@ -19,7 +14,7 @@ export function CurrentlyPlaying() {
   return (
     <>
       <header>
-        <h2>{}</h2>
+        <h2>{data.body}</h2>
       </header>
     </>
   )
