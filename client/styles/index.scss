@@ -36,5 +36,17 @@ header {
   padding-top: 30px;
 }
 
+.currently-playing-text{
+  padding-top: 375px;
+  background-color: #ffffff;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 32px;
+  font-weight: bold;
+}
 
-
+.welcome-text {
+  text-align: center;
+  font-size: 36px;
+}

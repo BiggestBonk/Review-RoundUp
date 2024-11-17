@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
             'Client-ID': 'avs0voxfy6j5m5zz3iod2afatfx25z',
             Authorization: `Bearer ${process.env.API_KEY}`,
         },
-        body: 'fields name;limit 3;',
+        body: 'fields *;where id = (302156,132058,165351);',
     })
     const jsonBody = await games.json()
     console.log(jsonBody)
