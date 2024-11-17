@@ -1,14 +1,13 @@
-import { useQuery } from '@tanstack/react-query'
-import request from 'superagent'
+import {useQuery} from '@tanstack/react-query'
 
 export function useGames() {
-  return useQuery({
-    queryKey: ['games'],
-    queryFn: async () => {
-      const res = await request.get('/')
-      return res
-    },
-  })
+    return useQuery({
+        queryKey: ['games'],
+        queryFn: async () => {
+            const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/`)
+            return await res.json()
+        },
+    })
 }
 
 // export function useAddCurrentlyPlaying() {

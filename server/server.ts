@@ -1,14 +1,30 @@
-import express from 'express'
+import express, {Express} from 'express'
 import * as Path from 'node:path'
-const server = express()
+import router from "./routes/games.ts";
+import cors from "cors";
 
-if (process.env.NODE_ENV === 'production') {
-  server.use(express.static(Path.resolve('public')))
-  server.use('/assets', express.static(Path.resolve('./dist/assets')))
-  server.get('*', (req, res) => {
-    res.sendFile(Path.resolve('./dist/index.html'))
-  })
+const expressServer = express()
+
+expressServer.use(cors())
+
+const setServer = (server: Express) => {
+    server.use(express.static(Path.resolve('public')))
+    server.use('/assets', express.static(Path.resolve('./dist/assets')))
+    server.use(router)
+    server.get('*', (req, res) => {
+        res.sendFile(Path.resolve('./dist/index.html'))
+    })
 }
+
+// if prod, set with x, else set with y
+if (process.env.NODE_ENV === 'production') {
+    setServer(expressServer)
+} else {
+    setServer(expressServer)
+}
+
+// -----------------
+
 // const rootUrl = 'https://api.igdb.com/v4/games'
 // request
 //   .post(rootUrl)
@@ -43,4 +59,4 @@ if (process.env.NODE_ENV === 'production') {
 //     console.error(err)
 //   })
 
-export default server
+export default expressServer
