@@ -37,16 +37,26 @@ header {
 }
 
 .currently-playing-text{
-  padding-top: 375px;
+  padding-top: 30px;
   background-color: #ffffff;
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-size: 32px;
   font-weight: bold;
+  text-align: center;
 }
 
 .welcome-text {
   text-align: center;
   font-size: 36px;
 }
+
+.currently-playing-cover-art{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.currently-playing-wrapper {}
