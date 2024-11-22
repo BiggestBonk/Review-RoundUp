@@ -7,10 +7,11 @@ export default function AppLayout() {
 
   return (
     <>
-
+      <div className='big-wrap'>
         <Header/>
         <Outlet/>
         <Footer/>
+      </div>
     </>
   )
 }

@@ -6,15 +6,24 @@ body {
   margin: 0;
   background-color: #ffffff;
 }
+main {
+  display: flex;
+  justify-content: center;
+}
 
+.big-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 footer {
-  position: absolute;
   bottom:0;
-  display:flex;
+  display: flex;
   padding: 0px 10px;
   justify-content: space-between;
-  width:98.90vw;
   background-color:#A0A4B8;
+  margin-top: auto;
+  margin-top: 2.61rem;
 }
 
 header {
@@ -41,10 +50,16 @@ header {
   background-color: #ffffff;
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  font-size: 32px;
+  justify-content: space-evenly;
+  font-size: 34px;
+  gap:50px;
   font-weight: bold;
   text-align: center;
+  padding: 0;
+
+  li {
+    max-width: 250px;
+  }
 }
 
 .welcome-text {
@@ -55,8 +70,14 @@ header {
 .currently-playing-cover-art{
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0;
+  vertical-align: auto;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
-.currently-playing-wrapper {}
+.currently-playing.wrapper {
+  padding-bottom: 2.5rem;
+  max-width: 2000px;
+}

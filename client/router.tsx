@@ -9,6 +9,7 @@ import Home from './components/Home'
 import GenreList from './components/GenreList'
 import GamePage from './components/GamePage'
 import GameList from './components/GameList'
+import { CurrentlyPlaying } from './components/CurrentlyPlaying'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
     <Route path='/genrelist'element={<GenreList/>}/> 
     <Route path='/gamelist'element={<GameList/>}/>
     <Route path='/gamepage/:gametitle'element={<GamePage/>}/>
+    <Route path='/currentlyplaying'element={<CurrentlyPlaying/>}/>
     </Route>
   )
 

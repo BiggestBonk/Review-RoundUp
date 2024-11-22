@@ -1,9 +1,7 @@
 import { useGameCovers, useGames } from '../hooks/hooks'
-import { Game } from '../../models/Games'
 
 export function CurrentlyPlaying() {
   const { isPending, isError, data: games, error } = useGames()
-  // const games = JSON.stringify(data)
   const {isPending: isPend, isError: isErr, data: covers} = useGameCovers()
   if (isPending || isPend) {
     return <p>Loading...</p>
@@ -15,7 +13,7 @@ export function CurrentlyPlaying() {
   return (
     <>
       <main>
-        <div>
+        <div className='container'>
           <p className="welcome-text">
             Welcome to the homepage! Here you&apos;ll be able <br></br>
             to filter by genre or view all games I&apos;ve played.<br></br>{' '}
