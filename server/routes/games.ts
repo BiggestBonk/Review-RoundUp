@@ -27,7 +27,7 @@ router.get('/covers', async (req, res) => {
       'Client-ID': 'avs0voxfy6j5m5zz3iod2afatfx25z',
       Authorization: `Bearer ${process.env.API_KEY}`,
     },
-    body: 'fields height,width,image_id,url;where game=(302156,132058,165351);',
+    body: 'fields height,width,image_id,url,game.name;where game=(302156,132058,165351);',
   })
   const jsonBody = await covers.json()
   console.log(jsonBody)

@@ -3,6 +3,6 @@ export interface GamePreview {
   name: string
 }
 
-export interface Game {
-  name:string
+export interface Cover {
+  game:string
 }

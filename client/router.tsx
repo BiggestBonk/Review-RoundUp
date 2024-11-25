@@ -17,7 +17,7 @@ const router = createBrowserRouter(
     <Route index element={<Home/>}/>
     <Route path='/genrelist'element={<GenreList/>}/> 
     <Route path='/gamelist'element={<GameList/>}/>
-    <Route path='/gamepage/:gametitle'element={<GamePage/>}/>
+    <Route path='/gamepage/:id'element={<GamePage/>}/>
     <Route path='/currentlyplaying'element={<CurrentlyPlaying/>}/>
     </Route>
   )
