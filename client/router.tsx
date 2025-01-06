@@ -6,19 +6,19 @@ import {
 } from 'react-router-dom'
 import AppLayout from './components/AppLayout'
 import Home from './components/Home'
-import GenreList from './components/GenreList'
+import Genres from './components/Genres'
 import GamePage from './components/GamePage'
-import GameList from './components/GameList'
+import AllGames from './components/AllGames'
 import { CurrentlyPlaying } from './components/CurrentlyPlaying'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/'element={<AppLayout/>}>
     <Route index element={<Home/>}/>
-    <Route path='/genrelist'element={<GenreList/>}/> 
-    <Route path='/gamelist'element={<GameList/>}/>
-    <Route path='/gamepage/:id'element={<GamePage/>}/>
-    <Route path='/currentlyplaying'element={<CurrentlyPlaying/>}/>
+    <Route path='/Genres'element={<Genres/>}/> 
+    <Route path='/AllGames'element={<AllGames/>}/>
+    <Route path='/GamePage/:Name'element={<GamePage/>}/>
+    <Route path='/CurrentlyPlaying'element={<CurrentlyPlaying/>}/>
     </Route>
   )
 

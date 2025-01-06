@@ -20,7 +20,7 @@ export function CurrentlyPlaying() {
             Welcome to the homepage! Here you&apos;ll be able <br></br>
             to filter by genre or view all games I&apos;ve played.<br></br>{' '}
             Below, you&apos;ll find a list of the games I&apos;m currently
-            playing.
+            playing:
           </p>
           <div className="currently-playing wrapper">
             <ol className="currently-playing-cover-art">
@@ -33,7 +33,8 @@ export function CurrentlyPlaying() {
                       src={`https://images.igdb.com/igdb/image/upload/t_${size}/${covers[cover].image_id}.png`}
                     />
                   </li>
-                  <li className='currently-playing-text'>{covers[cover].game.name}</li>
+                  <li className='currently-playing-text'>
+                    <Link to={`/GamePage/${covers[cover].game.name}`}>{covers[cover].game.name}</Link></li>
                 </div>
               ))}
             </ol>
