@@ -15,7 +15,6 @@ router.get('/', async (req, res) => {
     body: 'fields *;where id = (302156,132058,165351);',
   })
   const jsonBody = await games.json()
-  console.log(jsonBody)
   res.json(jsonBody)
 })
 
@@ -30,7 +29,6 @@ router.get('/covers', async (req, res) => {
     body: 'fields height,width,image_id,url,game.name;where game=(302156,132058,165351);',
   })
   const jsonBody = await covers.json()
-  console.log(jsonBody)
   res.json(jsonBody)
 })
 

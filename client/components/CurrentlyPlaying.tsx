@@ -25,7 +25,7 @@ export function CurrentlyPlaying() {
           <div className="currently-playing wrapper">
             <ol className="currently-playing-cover-art">
               {Object.keys(covers).map((cover, i) => (
-                <div className='alignment' key={i}>
+                <div className="alignment" key={i}>
                   <li>
                     <img
                       loading="lazy"
@@ -33,8 +33,11 @@ export function CurrentlyPlaying() {
                       src={`https://images.igdb.com/igdb/image/upload/t_${size}/${covers[cover].image_id}.png`}
                     />
                   </li>
-                  <li className='currently-playing-text'>
-                    <Link to={`/GamePage/${covers[cover].game.name}`}>{covers[cover].game.name}</Link></li>
+                  <li className="currently-playing-text">
+                    <Link to={`/GamePage/${covers[cover].game.name}`}>
+                      {covers[cover].game.name}
+                    </Link>
+                  </li>
                 </div>
               ))}
             </ol>
