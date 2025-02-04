@@ -1,35 +1,15 @@
-# Boilerplate: Fullstack with Sass
+A web-page to display games I've played along with their general information (provided by IGDB) and a brief review.
 
-## Setup
+The games will be primarily displayed in a list displaying it's title and cover art, which can be clicked on to be taken to it's specific page 
 
-### What's included
+The information that each entry will include is:
+* The Title of the game
+* Release Date
+* Platforms it released on
+* Aggregate Metacritic score
+* Recorded sales
+* A small review written by myself
+* A yes or no denoting whether I'd recommend the game, or a longer answer if necessary
 
-This repo includes:
+The current build displays the games I'm currently playing with their respective cover art and title.
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Vitest and testing library
-* configuration for server-side debugging in VS Code
-* configuration for preprocessing Sass
-
-### Installation
-
-#### **From the Github UI**
-
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-#### **From the command line**
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000) and the client running on [http://localhost:5173](http://localhost:5173).
-
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
